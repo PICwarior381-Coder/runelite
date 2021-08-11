@@ -132,7 +132,7 @@ class PluginListItem extends JPanel implements SearchablePlugin
 		SwingUtil.removeButtonDecorations(pinButton);
 		SwingUtil.addModalTooltip(pinButton, "Unpin plugin", "Pin plugin");
 		pinButton.setPreferredSize(new Dimension(21, 0));
-		add(pinButton, BorderLayout.LINE_START);
+		add(pinButton, BorderLayout.LINE_END);
 
 		pinButton.addActionListener(e ->
 		{
@@ -142,7 +142,7 @@ class PluginListItem extends JPanel implements SearchablePlugin
 
 		final JPanel buttonPanel = new JPanel();
 		buttonPanel.setLayout(new GridLayout(1, 2));
-		add(buttonPanel, BorderLayout.LINE_END);
+		add(buttonPanel, BorderLayout.LINE_START);
 
 		Map<String, Map<String, String>> pluginsInfoMap = oprsExternalPluginManager.getPluginsInfoMap();
 
